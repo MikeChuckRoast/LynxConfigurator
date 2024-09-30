@@ -108,6 +108,7 @@
             baseFolderText.Name = "baseFolderText";
             baseFolderText.Size = new Size(333, 27);
             baseFolderText.TabIndex = 1;
+            baseFolderText.Text = "C:\\RunMeetTF";
             // 
             // baseFolderLabel
             // 
@@ -130,6 +131,7 @@
             baseFolderChooseButton.TabIndex = 3;
             baseFolderChooseButton.Text = "Choose...";
             baseFolderChooseButton.UseVisualStyleBackColor = true;
+            baseFolderChooseButton.Click += baseFolderChooseButton_Click;
             // 
             // eventFolderChooseButton
             // 
@@ -140,6 +142,7 @@
             eventFolderChooseButton.TabIndex = 6;
             eventFolderChooseButton.Text = "Choose...";
             eventFolderChooseButton.UseVisualStyleBackColor = true;
+            eventFolderChooseButton.Click += eventFolderChooseButton_Click;
             // 
             // eventFolderLabel
             // 
@@ -169,6 +172,7 @@
             dbInputFolderChooseButton.TabIndex = 9;
             dbInputFolderChooseButton.Text = "Choose...";
             dbInputFolderChooseButton.UseVisualStyleBackColor = true;
+            dbInputFolderChooseButton.Click += dbInputFolderChooseButton_Click;
             // 
             // dbInputFolderLabel
             // 
@@ -198,6 +202,7 @@
             dbOutputFolderChooseButton.TabIndex = 12;
             dbOutputFolderChooseButton.Text = "Choose...";
             dbOutputFolderChooseButton.UseVisualStyleBackColor = true;
+            dbOutputFolderChooseButton.Click += dbOutputFolderChooseButton_Click;
             // 
             // dbOutputFolderLabel
             // 
@@ -227,6 +232,7 @@
             backupBaseFolderChooseButton.TabIndex = 15;
             backupBaseFolderChooseButton.Text = "Choose...";
             backupBaseFolderChooseButton.UseVisualStyleBackColor = true;
+            backupBaseFolderChooseButton.Click += backupBaseFolderChooseButton_Click;
             // 
             // backupBaseFolderLabel
             // 
@@ -257,6 +263,7 @@
             backupFolderChooseButton.TabIndex = 18;
             backupFolderChooseButton.Text = "Choose...";
             backupFolderChooseButton.UseVisualStyleBackColor = true;
+            backupFolderChooseButton.Click += backupFolderChooseButton_Click;
             // 
             // backupFolderLabel
             // 
@@ -285,6 +292,7 @@
             setAllFolderButton.TabIndex = 19;
             setAllFolderButton.Text = "Set All";
             setAllFolderButton.UseVisualStyleBackColor = true;
+            setAllFolderButton.Click += setAllFolderButton_Click;
             // 
             // label8
             // 
@@ -465,6 +473,7 @@
             // 
             maskStartNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             maskStartNumber.Location = new Point(123, 108);
+            maskStartNumber.Maximum = new decimal(new int[] { 3600, 0, 0, 0 });
             maskStartNumber.Name = "maskStartNumber";
             maskStartNumber.Size = new Size(54, 27);
             maskStartNumber.TabIndex = 38;
@@ -480,6 +489,7 @@
             trackButton.Text = "Track";
             toolTip.SetToolTip(trackButton, "Apply track defaults");
             trackButton.UseVisualStyleBackColor = true;
+            trackButton.Click += trackButton_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -511,6 +521,7 @@
             // 
             maskLapNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             maskLapNumber.Location = new Point(123, 143);
+            maskLapNumber.Maximum = new decimal(new int[] { 3600, 0, 0, 0 });
             maskLapNumber.Name = "maskLapNumber";
             maskLapNumber.Size = new Size(54, 27);
             maskLapNumber.TabIndex = 41;
@@ -597,6 +608,7 @@
             saveButton.TabIndex = 0;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = false;
+            saveButton.Click += saveButton_Click;
             // 
             // cancelButton
             // 
@@ -608,6 +620,7 @@
             cancelButton.TabIndex = 1;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = false;
+            cancelButton.Click += cancelButton_Click;
             // 
             // tableLayoutPanel5
             // 
@@ -634,6 +647,7 @@
             xcButton.TabIndex = 1;
             xcButton.Text = "XC / RR";
             xcButton.UseVisualStyleBackColor = true;
+            xcButton.Click += xcButton_Click;
             // 
             // ttButton
             // 
@@ -644,6 +658,7 @@
             ttButton.TabIndex = 2;
             ttButton.Text = "TT";
             ttButton.UseVisualStyleBackColor = true;
+            ttButton.Click += ttButton_Click;
             // 
             // ConfigForm
             // 
