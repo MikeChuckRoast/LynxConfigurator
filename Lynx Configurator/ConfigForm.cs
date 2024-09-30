@@ -8,8 +8,28 @@
         public ConfigForm()
         {
             InitializeComponent();
-            _cfgEditor = new LynxCfgEditor("C:\\Lynx\\lynx.cfg");
+            // Add version to title
+            Version? version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            if (version != null)
+            {
+                this.Text += " " + $"{version.Major}.{version.Minor}.{version.Build}";
+            }
+            _cfgEditor = new LynxCfgEditor(Properties.Settings.Default.LynxCfgPath);
+            LoadSettings();
             LoadDataFromCfg();
+        }
+
+        private void LoadSettings()
+        {
+            baseFolderText.Text = Properties.Settings.Default.BaseFolder;
+            backupBaseFolderText.Text = Properties.Settings.Default.BackupBaseFolder;
+        }
+
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.BaseFolder = baseFolderText.Text;
+            Properties.Settings.Default.BackupBaseFolder = backupBaseFolderText.Text;
+            Properties.Settings.Default.Save();
         }
 
         private void LoadDataFromCfg()
@@ -77,6 +97,8 @@
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            SaveSettings();
+
             var changes = new List<string>();
             if (eventFolderText.Text != _cfgEditor.getEventDirectory())
             {

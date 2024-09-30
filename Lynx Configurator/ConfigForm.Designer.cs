@@ -108,7 +108,6 @@
             baseFolderText.Name = "baseFolderText";
             baseFolderText.Size = new Size(333, 27);
             baseFolderText.TabIndex = 1;
-            baseFolderText.Text = "C:\\RunMeetTF";
             // 
             // baseFolderLabel
             // 

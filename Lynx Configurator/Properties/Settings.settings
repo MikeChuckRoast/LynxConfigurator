@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lynx_Configurator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LynxCfgPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Lynx\lynx.cfg</Value>
+    </Setting>
+    <Setting Name="BaseFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\RunMeetTF</Value>
+    </Setting>
+    <Setting Name="BackupBaseFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\LynxBackup</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
