@@ -2,7 +2,6 @@
 {
     public partial class ConfigForm : Form
     {
-
         private LynxCfgEditor _cfgEditor;
 
         public ConfigForm()
@@ -163,17 +162,32 @@
 
             if (changes.Count > 0)
             {
-                var response = MessageBox.Show("These settings will be updated: \r\n  -" + string.Join("\r\n  -", changes), "Confirm Changes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var response = MessageBox.Show(
+                    "These settings will be updated: \r\n  -" + string.Join("\r\n  -", changes),
+                    "Confirm Changes",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
                 if (response == DialogResult.OK)
                 {
                     _cfgEditor.Save();
                     CheckDirectoriesExist();
-                    MessageBox.Show("Settings have been saved", "Settings Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(
+                        "Settings have been saved",
+                        "Settings Saved",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                 }
             }
             else
             {
-                MessageBox.Show("No settings have been changed", "Settings Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    "No settings have been changed",
+                    "Settings Saved",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
             }
         }
 
@@ -246,7 +260,10 @@
                 eventFolderText.Text = System.IO.Path.Combine(baseFolderText.Text, eventName);
                 dbInputFolderText.Text = System.IO.Path.Combine(baseFolderText.Text, eventName);
                 dbOutputFolderText.Text = System.IO.Path.Combine(baseFolderText.Text, eventName);
-                backupFolderText.Text = System.IO.Path.Combine(backupBaseFolderText.Text, eventName);
+                backupFolderText.Text = System.IO.Path.Combine(
+                    backupBaseFolderText.Text,
+                    eventName
+                );
             }
         }
 
@@ -293,7 +310,6 @@
 
             // Set default laps to 4
             defaultLapsNumber.Value = 4;
-
         }
 
         private void viewOverlayKeyButton_Click(object sender, EventArgs e)

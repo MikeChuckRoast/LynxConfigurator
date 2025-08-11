@@ -8,11 +8,14 @@ namespace Lynx_Configurator
         private List<string> _lines = new List<string>();
 
         public LynxCfgEditor(string cfgPath)
-        { 
+        {
             this._cfgPath = cfgPath;
             if (!System.IO.File.Exists(cfgPath))
             {
-                throw new System.IO.FileNotFoundException("The specified file does not exist.", cfgPath);
+                throw new System.IO.FileNotFoundException(
+                    "The specified file does not exist.",
+                    cfgPath
+                );
             }
             Load();
         }
@@ -34,7 +37,7 @@ namespace Lynx_Configurator
                 if (_lines[i].StartsWith(key + ":"))
                 {
                     string[] values = _lines[i].Split('=');
-                    if ( values.Length != 2)
+                    if (values.Length != 2)
                     {
                         throw new Exception("Line did not have =");
                     }

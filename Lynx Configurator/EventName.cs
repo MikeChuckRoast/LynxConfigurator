@@ -17,7 +17,6 @@
                 }
                 return eventName;
             }
-
         }
         private bool _cancelled = false;
 
