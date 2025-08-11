@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             label1 = new Label();
             baseFolderText = new TextBox();
             baseFolderLabel = new Label();
@@ -766,6 +767,7 @@
             Controls.Add(setAllFolderButton);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "ConfigForm";
             Text = "Lynx Configurator";
