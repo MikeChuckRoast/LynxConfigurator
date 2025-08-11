@@ -78,22 +78,17 @@
 
         private void CheckDirectoriesExist()
         {
-            if (!Directory.Exists(eventFolderText.Text))
+            CreateDirIfMissing(eventFolderText.Text);
+            CreateDirIfMissing(dbInputFolderText.Text);
+            CreateDirIfMissing(dbOutputFolderText.Text);
+            CreateDirIfMissing(backupFolderText.Text);
+        }
+
+        private void CreateDirIfMissing(string path)
+        {
+            if (!Directory.Exists(path) && !string.IsNullOrEmpty(path))
             {
-                // Create directory
-                Directory.CreateDirectory(eventFolderText.Text);
-            }
-            if (!Directory.Exists(dbInputFolderText.Text))
-            {
-                Directory.CreateDirectory(dbInputFolderText.Text);
-            }
-            if (!Directory.Exists(dbOutputFolderText.Text))
-            {
-                Directory.CreateDirectory(dbOutputFolderText.Text);
-            }
-            if (!Directory.Exists(backupFolderText.Text))
-            {
-                Directory.CreateDirectory(backupFolderText.Text);
+                Directory.CreateDirectory(path);
             }
         }
 
