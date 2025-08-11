@@ -79,6 +79,7 @@
             tableLayoutPanel5 = new TableLayoutPanel();
             xcButton = new Button();
             ttButton = new Button();
+            viewOverlayKeyButton = new Button();
             ((System.ComponentModel.ISupportInitialize)autoSaveLifNumber).BeginInit();
             ((System.ComponentModel.ISupportInitialize)defaultLapsNumber).BeginInit();
             ((System.ComponentModel.ISupportInitialize)maskStartNumber).BeginInit();
@@ -659,11 +660,22 @@
             ttButton.UseVisualStyleBackColor = true;
             ttButton.Click += ttButton_Click;
             // 
+            // viewOverlayKeyButton
+            // 
+            viewOverlayKeyButton.Location = new Point(476, 418);
+            viewOverlayKeyButton.Name = "viewOverlayKeyButton";
+            viewOverlayKeyButton.Size = new Size(87, 34);
+            viewOverlayKeyButton.TabIndex = 45;
+            viewOverlayKeyButton.Text = "View Key";
+            viewOverlayKeyButton.UseVisualStyleBackColor = true;
+            viewOverlayKeyButton.Click += viewOverlayKeyButton_Click;
+            // 
             // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(667, 750);
+            Controls.Add(viewOverlayKeyButton);
             Controls.Add(tableLayoutPanel5);
             Controls.Add(tableLayoutPanel4);
             Controls.Add(tableLayoutPanel3);
@@ -745,5 +757,6 @@
         private Button trackButton;
         private Button xcButton;
         private Button ttButton;
+        private Button viewOverlayKeyButton;
     }
 }

@@ -296,5 +296,11 @@
 
         }
 
+        private void viewOverlayKeyButton_Click(object sender, EventArgs e)
+        {
+            // Display OverlayKey form
+            var overlayKeyForm = new OverlayKey();
+            overlayKeyForm.Show();
+        }
     }
 }
