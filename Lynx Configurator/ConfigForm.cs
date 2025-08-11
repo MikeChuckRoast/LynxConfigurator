@@ -313,7 +313,7 @@
             autoSaveLifNumber.Value = 5;
 
             // Set overlay to include athlete ID & lap count
-            overlayText.Text = "#%5 %7 %8 (Lap %22);%9";
+            overlayText.Text = "#%5 %7 %8 (Lap %2);%9";
             idlynxOverlayText.Text = "#%5 %7 %8;%9";
 
             // Set default laps to 4
