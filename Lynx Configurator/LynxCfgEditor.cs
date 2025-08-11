@@ -184,5 +184,25 @@ namespace Lynx_Configurator
         {
             Set("\\LapTime\\DuplicateMask", (value * 1000).ToString());
         }
+
+        public int getTemplateMode()
+        {
+            return int.Parse(Get("\\Event\\TemplateMode") ?? "0");
+        }
+
+        public void setTemplateMode(int value)
+        {
+            Set("\\Event\\TemplateMode", value.ToString());
+        }
+
+        public string getTemplate()
+        {
+            return Get("\\Event\\Template") ?? "";
+        }
+
+        public void setTemplate(string value)
+        {
+            Set("\\Event\\Template", value);
+        }
     }
 }

@@ -69,6 +69,10 @@
             maskStartNumber = new NumericUpDown();
             toolTip = new ToolTip(components);
             trackButton = new Button();
+            templateFileText = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            templateModeNumber = new NumericUpDown();
             tableLayoutPanel1 = new TableLayoutPanel();
             maskLapNumber = new NumericUpDown();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -80,22 +84,26 @@
             xcButton = new Button();
             ttButton = new Button();
             viewOverlayKeyButton = new Button();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)autoSaveLifNumber).BeginInit();
             ((System.ComponentModel.ISupportInitialize)defaultLapsNumber).BeginInit();
             ((System.ComponentModel.ISupportInitialize)maskStartNumber).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)templateModeNumber).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)maskLapNumber).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(37, 34);
+            label1.Location = new Point(15, 12);
             label1.Margin = new Padding(3);
             label1.Name = "label1";
             label1.Size = new Size(73, 25);
@@ -286,7 +294,7 @@
             // 
             // setAllFolderButton
             // 
-            setAllFolderButton.Location = new Point(116, 34);
+            setAllFolderButton.Location = new Point(94, 12);
             setAllFolderButton.Name = "setAllFolderButton";
             setAllFolderButton.Size = new Size(75, 29);
             setAllFolderButton.TabIndex = 19;
@@ -298,7 +306,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(37, 334);
+            label8.Location = new Point(15, 419);
             label8.Margin = new Padding(3, 6, 3, 3);
             label8.Name = "label8";
             label8.Size = new Size(78, 25);
@@ -345,7 +353,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(37, 474);
+            label12.Location = new Point(15, 559);
             label12.Margin = new Padding(3, 6, 3, 3);
             label12.Name = "label12";
             label12.Size = new Size(114, 25);
@@ -491,6 +499,48 @@
             trackButton.UseVisualStyleBackColor = true;
             trackButton.Click += trackButton_Click;
             // 
+            // templateFileText
+            // 
+            templateFileText.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            templateFileText.Location = new Point(123, 38);
+            templateFileText.Name = "templateFileText";
+            templateFileText.Size = new Size(330, 27);
+            templateFileText.TabIndex = 32;
+            toolTip.SetToolTip(templateFileText, "Overlay string for main camera");
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label2.AutoSize = true;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(114, 35);
+            label2.TabIndex = 21;
+            label2.Text = "Template Mode";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+            toolTip.SetToolTip(label2, "0 = None\r\n1 = Choose\r\n2 = File");
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label3.AutoSize = true;
+            label3.Location = new Point(3, 35);
+            label3.Name = "label3";
+            label3.Size = new Size(98, 35);
+            label3.TabIndex = 22;
+            label3.Text = "Template File";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+            toolTip.SetToolTip(label3, "Path to event file to use as template");
+            // 
+            // templateModeNumber
+            // 
+            templateModeNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            templateModeNumber.Location = new Point(123, 3);
+            templateModeNumber.Name = "templateModeNumber";
+            templateModeNumber.Size = new Size(54, 27);
+            templateModeNumber.TabIndex = 31;
+            toolTip.SetToolTip(templateModeNumber, "Seconds to auto save LIF file.\r\n0 to disable.\r\n5 is typical when enabled.");
+            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
@@ -506,7 +556,7 @@
             tableLayoutPanel1.Controls.Add(fillInTimeCheckBox, 1, 1);
             tableLayoutPanel1.Controls.Add(defaultLapsNumber, 1, 2);
             tableLayoutPanel1.Controls.Add(maskStartNumber, 1, 3);
-            tableLayoutPanel1.Location = new Point(75, 505);
+            tableLayoutPanel1.Location = new Point(53, 590);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
@@ -551,7 +601,7 @@
             tableLayoutPanel2.Controls.Add(dbInputFolderLabel, 0, 2);
             tableLayoutPanel2.Controls.Add(backupFolderLabel, 0, 5);
             tableLayoutPanel2.Controls.Add(backupBaseFolderLabel, 0, 4);
-            tableLayoutPanel2.Location = new Point(75, 65);
+            tableLayoutPanel2.Location = new Point(53, 43);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 6;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
@@ -574,7 +624,7 @@
             tableLayoutPanel3.Controls.Add(idlynxOverlayLabel, 0, 2);
             tableLayoutPanel3.Controls.Add(idlynxOverlayText, 1, 2);
             tableLayoutPanel3.Controls.Add(autoSaveLifNumber, 1, 0);
-            tableLayoutPanel3.Location = new Point(75, 365);
+            tableLayoutPanel3.Location = new Point(53, 450);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 3;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
@@ -591,7 +641,7 @@
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Controls.Add(saveButton, 0, 0);
             tableLayoutPanel4.Controls.Add(cancelButton, 1, 0);
-            tableLayoutPanel4.Location = new Point(12, 693);
+            tableLayoutPanel4.Location = new Point(12, 788);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -631,7 +681,7 @@
             tableLayoutPanel5.Controls.Add(trackButton, 0, 0);
             tableLayoutPanel5.Controls.Add(xcButton, 1, 0);
             tableLayoutPanel5.Controls.Add(ttButton, 2, 0);
-            tableLayoutPanel5.Location = new Point(37, 281);
+            tableLayoutPanel5.Location = new Point(15, 259);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -662,7 +712,7 @@
             // 
             // viewOverlayKeyButton
             // 
-            viewOverlayKeyButton.Location = new Point(476, 418);
+            viewOverlayKeyButton.Location = new Point(454, 503);
             viewOverlayKeyButton.Name = "viewOverlayKeyButton";
             viewOverlayKeyButton.Size = new Size(87, 34);
             viewOverlayKeyButton.TabIndex = 45;
@@ -670,11 +720,41 @@
             viewOverlayKeyButton.UseVisualStyleBackColor = true;
             viewOverlayKeyButton.Click += viewOverlayKeyButton_Click;
             // 
+            // tableLayoutPanel6
+            // 
+            tableLayoutPanel6.ColumnCount = 2;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Controls.Add(templateFileText, 1, 1);
+            tableLayoutPanel6.Controls.Add(label2, 0, 0);
+            tableLayoutPanel6.Controls.Add(label3, 0, 1);
+            tableLayoutPanel6.Controls.Add(templateModeNumber, 1, 0);
+            tableLayoutPanel6.Location = new Point(53, 344);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 2;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel6.Size = new Size(456, 70);
+            tableLayoutPanel6.TabIndex = 47;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(15, 313);
+            label5.Margin = new Padding(3, 6, 3, 3);
+            label5.Name = "label5";
+            label5.Size = new Size(88, 25);
+            label5.TabIndex = 46;
+            label5.Text = "Template";
+            // 
             // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(667, 750);
+            ClientSize = new Size(667, 845);
+            Controls.Add(tableLayoutPanel6);
+            Controls.Add(label5);
             Controls.Add(viewOverlayKeyButton);
             Controls.Add(tableLayoutPanel5);
             Controls.Add(tableLayoutPanel4);
@@ -692,6 +772,7 @@
             ((System.ComponentModel.ISupportInitialize)autoSaveLifNumber).EndInit();
             ((System.ComponentModel.ISupportInitialize)defaultLapsNumber).EndInit();
             ((System.ComponentModel.ISupportInitialize)maskStartNumber).EndInit();
+            ((System.ComponentModel.ISupportInitialize)templateModeNumber).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)maskLapNumber).EndInit();
@@ -701,6 +782,8 @@
             tableLayoutPanel3.PerformLayout();
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -758,5 +841,11 @@
         private Button xcButton;
         private Button ttButton;
         private Button viewOverlayKeyButton;
+        private TableLayoutPanel tableLayoutPanel6;
+        private TextBox templateFileText;
+        private Label label2;
+        private Label label3;
+        private NumericUpDown templateModeNumber;
+        private Label label5;
     }
 }

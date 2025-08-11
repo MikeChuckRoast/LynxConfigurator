@@ -47,6 +47,9 @@
             defaultLapsNumber.Value = _cfgEditor.getLapTimeTotalLaps();
             maskStartNumber.Value = _cfgEditor.getLapTimeStartMask();
             maskLapNumber.Value = _cfgEditor.getLapTimeDuplicateMask();
+
+            templateModeNumber.Value = _cfgEditor.getTemplateMode();
+            templateFileText.Text = _cfgEditor.getTemplate();
         }
 
         private string? BrowseForFolder(string? startingFolder)
@@ -158,6 +161,16 @@
             {
                 _cfgEditor.setLapTimeDuplicateMask((int)maskLapNumber.Value);
                 changes.Add("Mask Lap");
+            }
+            if (templateModeNumber.Value != _cfgEditor.getTemplateMode())
+            {
+                _cfgEditor.setTemplateMode((int)templateModeNumber.Value);
+                changes.Add("Template Mode");
+            }
+            if (templateFileText.Text != _cfgEditor.getTemplate())
+            {
+                _cfgEditor.setTemplate(templateFileText.Text);
+                changes.Add("Template File");
             }
 
             if (changes.Count > 0)
