@@ -258,8 +258,8 @@
             autoSaveLifNumber.Value = 0;
 
             // Set overlay to include lane number
-            overlayText.Text = "#%6 %7 %8;%9";
-            idlynxOverlayText.Text = "#%5 %7 %8;%9";
+            overlayText.Text = "#%5 %7 %8;%9;Ln %6";
+            idlynxOverlayText.Text = "#%5 %7 %8;%9;Lap %2";
 
             // Set default laps to 0
             defaultLapsNumber.Value = 0;
