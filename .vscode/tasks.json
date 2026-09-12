@@ -34,10 +34,15 @@
             "args": [
                 "publish",
                 "${workspaceFolder}/Lynx Configurator.sln",
+                "/p:PublishProfile=FolderProfile",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
         }
     ]
 }
