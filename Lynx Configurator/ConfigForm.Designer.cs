@@ -87,6 +87,7 @@
             viewOverlayKeyButton = new Button();
             tableLayoutPanel6 = new TableLayoutPanel();
             label5 = new Label();
+            contentPanel = new Panel();
             ((System.ComponentModel.ISupportInitialize)autoSaveLifNumber).BeginInit();
             ((System.ComponentModel.ISupportInitialize)defaultLapsNumber).BeginInit();
             ((System.ComponentModel.ISupportInitialize)maskStartNumber).BeginInit();
@@ -98,6 +99,7 @@
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
+            contentPanel.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -748,27 +750,39 @@
             label5.Size = new Size(88, 25);
             label5.TabIndex = 46;
             label5.Text = "Template";
-            // 
+            //
+            // contentPanel
+            //
+            contentPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            contentPanel.AutoScroll = true;
+            contentPanel.AutoScrollMargin = new Size(0, 12);
+            contentPanel.Controls.Add(tableLayoutPanel6);
+            contentPanel.Controls.Add(label5);
+            contentPanel.Controls.Add(viewOverlayKeyButton);
+            contentPanel.Controls.Add(tableLayoutPanel5);
+            contentPanel.Controls.Add(tableLayoutPanel3);
+            contentPanel.Controls.Add(tableLayoutPanel2);
+            contentPanel.Controls.Add(tableLayoutPanel1);
+            contentPanel.Controls.Add(label12);
+            contentPanel.Controls.Add(label8);
+            contentPanel.Controls.Add(setAllFolderButton);
+            contentPanel.Controls.Add(label1);
+            contentPanel.Location = new Point(0, 0);
+            contentPanel.Name = "contentPanel";
+            contentPanel.Size = new Size(667, 782);
+            contentPanel.TabIndex = 48;
+            //
             // ConfigForm
-            // 
+            //
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(667, 845);
-            Controls.Add(tableLayoutPanel6);
-            Controls.Add(label5);
-            Controls.Add(viewOverlayKeyButton);
-            Controls.Add(tableLayoutPanel5);
+            Controls.Add(contentPanel);
             Controls.Add(tableLayoutPanel4);
-            Controls.Add(tableLayoutPanel3);
-            Controls.Add(tableLayoutPanel2);
-            Controls.Add(tableLayoutPanel1);
-            Controls.Add(label12);
-            Controls.Add(label8);
-            Controls.Add(setAllFolderButton);
-            Controls.Add(label1);
             Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(500, 350);
             Name = "ConfigForm";
             Text = "Lynx Configurator";
             ((System.ComponentModel.ISupportInitialize)autoSaveLifNumber).EndInit();
@@ -786,6 +800,8 @@
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
+            contentPanel.ResumeLayout(false);
+            contentPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -849,5 +865,6 @@
         private Label label3;
         private NumericUpDown templateModeNumber;
         private Label label5;
+        private Panel contentPanel;
     }
 }
