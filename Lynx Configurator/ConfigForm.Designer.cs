@@ -385,7 +385,7 @@
             fillInTimeLabel.TabIndex = 27;
             fillInTimeLabel.Text = "Fill In Time";
             fillInTimeLabel.TextAlign = ContentAlignment.MiddleLeft;
-            toolTip.SetToolTip(fillInTimeLabel, "Typically on.\r\nAutomatically populate overall time based on last lap time.");
+            toolTip.SetToolTip(fillInTimeLabel, "Typically off.\r\nAutomatically populate overall time based on last lap time.");
             // 
             // defaultLapsLabel
             // 
@@ -397,7 +397,7 @@
             defaultLapsLabel.TabIndex = 28;
             defaultLapsLabel.Text = "Default Laps";
             defaultLapsLabel.TextAlign = ContentAlignment.MiddleLeft;
-            toolTip.SetToolTip(defaultLapsLabel, "Default number of laps for new events.");
+            toolTip.SetToolTip(defaultLapsLabel, "Default number of laps for new events. Use -1 to count up.");
             // 
             // maskStartLabel
             // 
@@ -476,6 +476,7 @@
             // 
             defaultLapsNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             defaultLapsNumber.Location = new Point(123, 73);
+            defaultLapsNumber.Minimum = new decimal(new int[] { 1, 0, 0, int.MinValue });
             defaultLapsNumber.Name = "defaultLapsNumber";
             defaultLapsNumber.Size = new Size(54, 27);
             defaultLapsNumber.TabIndex = 37;
